@@ -1,8 +1,10 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/amueller/introduction_to_ml_with_python/master)
+
 # Introduction to Machine Learning with Python
 
 This repository holds the code for the forthcoming book "Introduction to Machine
 Learning with Python" by [Andreas Mueller](http://amueller.io) and [Sarah Guido](https://twitter.com/sarah_guido).
-You can find details about the book on the [O'Reilly website](http://shop.oreilly.com/product/0636920030515.do>).
+You can find details about the book on the [O'Reilly website](http://shop.oreilly.com/product/0636920030515.do).
 
 The books requires the current development version of scikit-learn, that is
 0.18-dev.  Most of the book can also be used with previous versions of
@@ -20,6 +22,9 @@ For the curious ones, the cover depicts a [hellbender](https://en.wikipedia.org/
 All datasets are included in the repository, with the exception of the aclImdb dataset, which you can download from
 the page of [Andrew Maas](http://ai.stanford.edu/~amaas/data/sentiment/). See the book for details.
 
+If you get ``ImportError: No module named mglearn`` you can try to install mglearn into your python environment using
+the command ``pip install mglearn`` in your terminal or ``!pip install mglearn`` in Jupyter Notebook.
+
 
 ## Errata
 Please note that the first print of the book is missing the following line when listing the assumed imports:
@@ -28,6 +33,11 @@ Please note that the first print of the book is missing the following line when 
 from IPython.display import display
 ```
 Please add this line if you see an error involving ``display``.
+
+
+The first print of the book used a function called ``plot_group_kfold``.
+This has been renamed to ``plot_label_kfold`` because of a rename in
+scikit-learn.
 
 ## Setup
 
@@ -39,13 +49,8 @@ The easiest way to set up an environment is by installing [Anaconda](https://www
 ### Installing packages with conda:
 If you already have a Python environment set up, and you are using the ``conda`` package manager, you can get all packages by running
 
-    conda install numpy scipy scikit-learn matplotlib pandas pillow graphviz
+    conda install numpy scipy scikit-learn matplotlib pandas pillow graphviz python-graphviz
 
-and then *also*
-
-    pip install graphviz
-
-(Explanation: the conda package graphiz is the C library, not the python library)
 
 ### Installing packages with pip
 If you already have a Python environment and are using pip to install packages, you need to run
@@ -56,7 +61,7 @@ You also need to install the graphiz C-library, which is easiest using a package
 If you are using OS X and homebrew, you can ``brew install graphviz``. If you are on Ubuntu or debian, you can ``apt-get install graphviz``.
 Installing graphviz on Windows can be tricky and using conda / anaconda is recommended.
 
-## Errata
+## Submitting Errata
 
 If you have errata for the (e-)book, please submit them via the [O'Reilly Website](http://www.oreilly.com/catalog/errata.csp?isbn=0636920030515).
 You can submit fixed to the code as pull-requests here, but I'd appreciate it if you would also submit them there, as this repository doesn't hold the
