@@ -1,3 +1,9 @@
 *.pyc
 *.swp
 .ipynb_checkpoints/
+*fineway*
+cache*
+*.log
+metastore_db*
+*.png
+*.dot
